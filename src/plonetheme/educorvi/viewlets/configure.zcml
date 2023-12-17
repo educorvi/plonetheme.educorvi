@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plonetheme.educorvi">
+
+  -*- extra stuff goes here -*-
+
+  <browser:viewlet
+     name="header-viewlet"
+     for="Products.ATContentTypes.interfaces.document.IATDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
+     class=".header_viewlet.HeaderViewlet"
+     template="header-viewlet.pt"
+     permission="zope2.View"
+     />
+
+
+</configure>
