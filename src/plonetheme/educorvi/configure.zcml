@@ -43,6 +43,13 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <plone:static
+      directory="theme"
+      type="theme"
+      name="educorvi-home"
+      />
+
+
   <include package=".viewlets" />
 
 </configure>
