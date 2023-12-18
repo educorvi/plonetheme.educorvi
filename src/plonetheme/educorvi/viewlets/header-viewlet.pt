@@ -1,3 +1,35 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+    <nav id="menu" class="navbar navbar-expand-lg pb-2 pb-lg-0">
+      <div class="container d-flex align-items-end">
+	      <a class="navbar-brand me-0" href="${view/portal_url}">
+		<img class="h-auto mb-lg-2" src="${view/logo_url}" alt="Logo educorvi" width="180" height="40">
+        </a>
+        <button id="navToggler" class="hamburger d-lg-none bg-transparent border-0 mb-1 mb-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+          <span class="hamburger-box position-relative">
+            <span class="hamburger-inner d-block"></span>
+          </span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav pt-4 pb-2 pb-lg-0">
+            <li class="nav-item">
+		    <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4 active" aria-current="page" href="${view/portal_url}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Leistungen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Projekte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-2 px-3 px-xl-4" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+

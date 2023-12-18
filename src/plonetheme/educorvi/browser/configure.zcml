@@ -6,6 +6,7 @@
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
+  <include package="plone.resource" file="meta.zcml"/>
   <browser:jbot
       directory="overrides"
       layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
@@ -16,6 +17,14 @@
       name="plonetheme.educorvi"
       type="plone"
       directory="static"
+      />
+
+  <browser:page
+      for="*"
+      name="main_template"
+      class=".main_template.MainTemplate"
+      permission="zope.Public"
+      layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
       />
 
 </configure>

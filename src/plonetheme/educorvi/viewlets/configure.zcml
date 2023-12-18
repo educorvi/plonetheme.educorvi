@@ -8,13 +8,12 @@
 
   <browser:viewlet
      name="header-viewlet"
-     for="Products.ATContentTypes.interfaces.document.IATDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
      layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
      class=".header_viewlet.HeaderViewlet"
      template="header-viewlet.pt"
      permission="zope2.View"
      />
-
 
 </configure>

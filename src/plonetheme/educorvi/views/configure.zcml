@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plonetheme.educorvi">
+
+  -*- extra stuff goes here -*-
+
+  <browser:page
+    name="home-view"
+    for="Products.CMFCore.interfaces.IFolderish"
+    class=".home_view.HomeView"
+    template="home_view.pt"
+    permission="zope2.View"
+    />
+
+
+</configure>

@@ -1,5 +1,12 @@
-<div class="page-footer text-white bg-secondary">
-	<p class="text-center p-5 mb-0">
-		Plone Training Theme | Copyright &copy; 2022
-	</p>
-</div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            © 2023 educorvi GmbH & Co. KG
+          </div>
+          <nav class="col-md-6 d-md-flex justify-content-md-end">
+            <a class="me-4 active" aria-current="page" href="#">Home</a>
+            <a class="me-4" href="#">Datenschutz</a>
+            <a href="#">Impressum</a>
+          </nav>
+        </div>
+      </div>
