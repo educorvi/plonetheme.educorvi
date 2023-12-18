@@ -2,17 +2,10 @@
 
 from plonetheme.educorvi import _
 from Products.Five.browser import BrowserView
-
-
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
+from plone import api
 
 class HomeView(BrowserView):
-    # If you want to define a template here, please remove the template from
-    # the configure.zcml registration of this view.
-    # template = ViewPageTemplateFile('home_view.pt')
 
     def __call__(self):
-        # Implement your own actions:
-        self.msg = _(u'A small message')
+        self.res_url = api.portal.get().absolute_url()+'/++plone++plonetheme.educorvi'
         return self.index()

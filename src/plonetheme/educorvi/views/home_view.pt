@@ -1,13 +1,117 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="plonetheme.educorvi"
-      metal:use-macro="context/main_template/macros/master">
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="example.conference">
 <body>
-  <metal:block fill-slot="content-core">
-      <h2 i18n:translate="">Sample View</h2>
-      <p tal:content="view/msg">this gets replaced</p>
-  </metal:block>
+
+<metal:body fill-slot="content">
+  <tal:body-macro metal:define-macro="content">
+
+    <main class="home">
+      <header class="pt-6 pb-7">
+        <div class="container-fluid">
+          <div class="d-flex flex-column position-relative mb-5 mb-lg-4 px-xxl-5">
+            <h1 class="d-flex flex-column order-lg-2 text-uppercase lh-1 mb-4 mb-lg-0">Content <span class="d-flex align-items-center ps-lg-5">Management</span></h1>
+            <h2 class="h3 order-lg-1 text-software mb-2 mb-lg-3">Softwareentwicklung</h2>
+            <h2 class="h3 order-lg-3 text-consulting mb-2 mb-lg-0 ps-lg-0">Beratung &amp; Unterstützung</h2>
+            <h2 class="h3 order-lg-4 text-education mb-2 mb-lg-0 mt-lg-3">Aus- &amp; Weiterbildung</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 col-lg-5 col-xxl-4 offset-lg-6 offset-xxl-7 d-flex flex-column align-items-lg-center">
+              <a class="border-0 mb-3 me-lg-5" href="#anchor" title="Zum Inhalt springen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 500 500">
+                  <circle cx="250" cy="250" r="250" fill="#ed2738"/>
+                  <polygon points="339.9 260.72 263.65 344.85 263.65 99.49 236.37 99.49 236.37 344.86 160.1 260.72 139.9 279.04 250 400.51 360.1 279.04 339.9 260.72" fill="#fff"/>
+                </svg>
+              </a>
+              <p class="mb-0">Neues Content Management verbindet Inhalte, Daten und Funktionsbausteine zu einem Digitalangebot von Menschen für Menschen.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="anchor" class="bg-lightgrey pt-6 pb-7">
+        <div class="container-fluid">
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-lg-11 offset-lg-1">
+              <h3 class="h2 text-software">Software&shy;entwicklung</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 offset-lg-1 offset-xxl-2 mb-4 mb-md-0">
+	      <img class="img-fluid pt-md-2" src="${view/res_url}/icon-software.svg" alt="Icon Softwareentwicklung" width="360" height="287" loading="lazy">
+            </div>
+            <div class="col-12 col-md-7 col-xxl-6 offset-md-1">
+              <ul class="mb-5">
+                <li>Anwendung für besseres Content Management</li>
+                <li>CMS-Plugins für Online-Kurse</li>
+                <li>NO-CODE-Modellierung von Online-Formularen</li>
+                <li>LOW-CODE-Generierung von WebApps</li>
+                <li>Software für Datenschutz Management</li>
+                <li>Software für das Management von Business Rules</li>
+                <li>Schaffung und Nutzung von Schnittstellen für die Integration von Softwaresystemen</li>
+              </ul>
+              <a class="btn btn-primary" href="#">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-6 pb-7">
+        <div class="container">
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-lg-11 offset-lg-1">
+              <h3 class="h2 text-consulting">Beratung &amp; Unterstützung</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 offset-lg-1 offset-xxl-2 mb-4 mb-md-0">
+	      <img class="img-fluid pt-md-2" src="${view/res_url}/icon-consulting.svg" alt="Icon Beratung & Unterstützung" width="320" height="320" loading="lazy">
+            </div>
+            <div class="col-12 col-md-7 col-xxl-6 offset-md-1">
+              <p>Für Menschen im Entscheidungsprozess, in Projekten und in der Softwareentwicklung.</p>
+              <h4>Beratung und Unterstützungsangebote</h4>
+              <ul class="mb-5">
+                <li>Web-Content-Management und NO-CODE-Softwareentwicklung</li>
+                <li>Agile Softwareentwicklung und Open Source Software</li>
+                <li>Cybersecurity und Datenschutz</li>
+              </ul>
+              <a class="btn btn-primary" href="#">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-lightgrey pt-6 pb-7">
+        <div class="container">
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-lg-11 offset-lg-1">
+              <h3 class="h2 text-education">Aus- &amp; Weiterbildung</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 offset-lg-1 offset-xxl-2 mb-4 mb-md-0">
+	      <img class="img-fluid pt-md-2" src="${view/res_url}/icon-education.svg" alt="Icon Aus- & Weiterbildung" width="320" height="320" loading="lazy">
+            </div>
+            <div class="col-12 col-md-7 col-xxl-6 offset-md-1">
+              <ul class="list-arrow mb-5">
+                <li>Für Sachbearbeiter:innen und Mitarbeiter:innen in der Verwaltung</li>
+                <li>Für Autor:innen und Redakteur:innen</li>
+                <li>Für IT-Mitarbeiter in Unternehmen</li>
+              </ul>
+              <ul class="mb-5">
+                <li>Mit eigener Online-Kursplattform</li>
+                <li>in Präsenzschulungen</li>
+                <li>in Workshops</li>
+              </ul>
+              <a class="btn btn-primary" href="#">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </tal:body-macro>
+</metal:body>
 </body>
 </html>
