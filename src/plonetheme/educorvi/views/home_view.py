@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
+from plone import api
 from plonetheme.educorvi import _
 from Products.Five.browser import BrowserView
-from plone import api
+
 
 class HomeView(BrowserView):
 
