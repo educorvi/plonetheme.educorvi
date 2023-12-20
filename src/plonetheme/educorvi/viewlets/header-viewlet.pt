@@ -10,26 +10,10 @@
         </button>
         <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
           <ul class="navbar-nav pt-4 pb-2 pb-lg-0">
-            <li class="nav-item">
-		    <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4 active" aria-current="page" href="${view/portal_url}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Leistungen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Projekte</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Über uns</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link py-2 px-3 px-xl-4" href="#">Kontakt</a>
+            <li class="nav-item" tal:repeat="item view/items">
+              <a class="${item/class}" aria-current="page" href="${item/url}">${item/title}</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
