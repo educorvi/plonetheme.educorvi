@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from plone.app.layout.viewlets import ViewletBase
-
+from plone import api
 
 class BannerViewlet(ViewletBase):
 
     def update(self):
-        self.message = self.get_message()
+        self.imageurl = api.portal.get().absolute_url() + '/++plone++plonetheme.educorvi'
 
-    def get_message(self):
-        return u'My message'
 
     def index(self):
         return super(BannerViewlet, self).render()
