@@ -1,4 +1,6 @@
-<nav class="row mb-4 mb-md-5">
+<article>
+  <header>
+    <nav class="row mb-4 mb-md-5">
         <a class="col-4 d-flex align-items-center justify-content-center border-0 p-4" href="#">
                 <img class="img-fluid" src="${view/imageurl}/icon-software-grayscale.svg" alt="Icon Softwareentwicklung" width="310" height="240">
         </a>
@@ -8,4 +10,6 @@
         <a class="col-4 d-flex align-items-center justify-content-center border-0 text-center p-4" href="#">
                 <img class="img-fluid" src="${view/imageurl}/icon-education-grayscale.svg" alt="Icon Aus- & Weiterbildung" width="240" height="240">
         </a>
-</nav>
+    </nav>
+  </header>
+</article>

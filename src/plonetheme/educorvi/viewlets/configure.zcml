@@ -8,7 +8,7 @@
 
   <browser:viewlet
      name="banner-viewlet"
-     for="*"
+     for="plone.app.contenttypes.interfaces.IDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
      layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
      class=".banner_viewlet.BannerViewlet"

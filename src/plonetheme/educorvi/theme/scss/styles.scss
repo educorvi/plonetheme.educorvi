@@ -18,6 +18,7 @@ $background-color_8: var(--color-darkgrey);
 $background-color_9: var(--color-midgrey);
 $background-color_10: rgba(63, 68, 66, .75);
 $background-color_11: transparent;
+$background-color_banner: #ececec;
 $border-color_1: var(--color-darkgrey);
 $border-color_2: transparent;
 $border-color_3: var(--color-midgrey);
@@ -555,6 +556,13 @@ article {
 	ol {
 		padding-left: clamp(2rem, calc(1.75rem + 2.5vw), 6rem);
 		margin-bottom: 3rem;
+	}
+	header {
+		nav {
+			a {
+				background-color: $background-color_banner;
+			}
+		}
 	}
 }
 footer {
