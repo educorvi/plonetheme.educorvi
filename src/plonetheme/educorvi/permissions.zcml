@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="plonetheme.educorvi.AddLeistung"
+        title="plonetheme.educorvi: Add Leistung"
+    />
+
+
+    <permission
         id="plonetheme.educorvi.AddEducorviHomepage"
         title="plonetheme.educorvi: Add EducorviHomepage"
     />
