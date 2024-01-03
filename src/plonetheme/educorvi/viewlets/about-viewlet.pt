@@ -1,3 +1,5 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+<ul class="article-meta list-unstyled d-flex flex-column flex-md-row border-bottom mb-0 pb-2">
+  <li>Letzte Änderung: 12.12.2023</li>
+  <li>Kategorie: <a href="#">Themenbereich</a></li>
+  <li>Weitere mögliche Meta-Angaben</li>
+</ul>

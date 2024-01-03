@@ -7,9 +7,19 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
-     name="about-viewlet"
+     name="banner-viewlet"
      for="Products.ATContentTypes.interfaces.document.IATDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
+     class=".banner_viewlet.BannerViewlet"
+     template="banner-viewlet.pt"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
+     name="educorvi.about"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
      layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
      class=".about_viewlet.AboutViewlet"
      template="about-viewlet.pt"
@@ -17,7 +27,7 @@
      />
 
   <browser:viewlet
-     name="header-viewlet"
+     name="educorvi.header"
      for="*"
      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
      layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"

@@ -23,13 +23,13 @@
           <header class="container py-6">
             <div class="row">
               <div class="col-lg-11 col-xl-10 col-xxl-9 offset-xl-1">
-                <div class="d-flex flex-column">
+		<div class="d-flex flex-column">
                   <h1 tal:content="context/title" class="order-2"></h1>
                   <h2 tal:condition="context/dachzeile | nothing" tal:content="context/dachzeile | nothing" class="h4 order-1 text-uppercase"></h2>
-                </div>
+		</div>
                 <div tal:condition="context/description" class="lead">
                   <p tal:content="context/description"></p>
-                </div>
+		</div>
                 <!--<ul class="article-meta list-unstyled d-flex flex-column flex-md-row border-bottom mb-0 pb-2">
                   <li>Letzte Änderung: 12.12.2023</li>
                   <li>Kategorie: <a href="#">Themenbereich</a></li>
