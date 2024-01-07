@@ -9,6 +9,7 @@
   <body>
 
     <metal:main fill-slot="main">
+    <div class="container">
 
       <div class="row">
         <div class="col-12">
@@ -22,7 +23,7 @@
         <article>
           <header class="container pt-3 pb-5">
             <div class="row">
-              <div class="col-lg-11 col-xl-10 col-xxl-9 offset-xl-1">
+              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
 		<div class="d-flex flex-column">
                   <h1 tal:content="context/title" class="order-2"></h1>
                   <h2 tal:condition="context/dachzeile | nothing" tal:content="context/dachzeile | nothing" class="h4 order-1 text-uppercase"></h2>
@@ -41,13 +42,14 @@
           </header>
 	  <section class="container pb-6">
 	    <div class="row">
-              <div class="col-lg-11 col-xl-10 col-xxl-9 offset-xl-1">
+              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
 	        <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" />
-	        <span tal:replace="structure context/text/output"/>
+	        <span tal:condition="context/text" tal:replace="structure context/text/output"/>
 	      </div>
 	  </section>
 	<article>
       </main>
+	      </div>
     </metal:main>
   </body>
 </html>
