@@ -57,7 +57,7 @@
 		<li tal:repeat="topic python:entryobj.topics">${topic}</li>
               </ul>
 	      <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()"
-		 tal:content="python: entryobject.cta_title"></a>
+		 tal:content="python: entryobj.cta_title"></a>
             </div>
           </div>
 	</div>
@@ -83,7 +83,7 @@
 		<li tal:repeat="topic python:entryobj.topics">${topic}</li>
               </ul>
 	      <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()"
-		 tal:content="python: entryobject.cta_title"></a>
+		 tal:content="python: entryobj.cta_title"></a>
             </div>
           </div>
 	</div>

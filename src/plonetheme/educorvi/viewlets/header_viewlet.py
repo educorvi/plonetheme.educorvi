@@ -15,9 +15,12 @@ class HeaderViewlet(ViewletBase):
 
     def get_formatted_items(self):
         formatted_items = []
-        portalid = api.portal.get().id
+        portal = api.portal.get()
+        portalid = portal.id
         contextpath = self.context.virtual_url_path().split('/')
         if contextpath[-1] == portalid:
+            formatted_items.append({'title':'Startseite', 'url':self.portal_url, 'class':'nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4 active'})
+        elif contextpath[-1] == portal.getDefaultPage():
             formatted_items.append({'title':'Startseite', 'url':self.portal_url, 'class':'nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4 active'})
         else:
             formatted_items.append({'title':'Startseite', 'url':self.portal_url, 'class':'nav-link mb-1 mb-lg-0 py-2 px-3 px-xl-4'})
