@@ -7,6 +7,16 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
+     name="references-viewlet"
+     for="Products.ATContentTypes.interfaces.document.IATDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="plonetheme.educorvi.interfaces.IPlonethemeEducorviLayer"
+     class=".references_viewlet.ReferencesViewlet"
+     template="references-viewlet.pt"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
      name="banner-viewlet"
      for="plone.app.contenttypes.interfaces.IDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContent"

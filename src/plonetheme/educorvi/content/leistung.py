@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-from plone.autoform import directives
-from plone.dexterity.content import Item
-from plone.supermodel import model
-from zope import schema
-from zope.interface import implementer
-from z3c.relationfield.schema import RelationChoice
 from plone.app.vocabularies.catalog import CatalogSource
 from plone.app.z3cform.widget import RelatedItemsFieldWidget
+from plone.autoform import directives
+from plone.dexterity.content import Item
 from plone.namedfile.field import NamedBlobImage
+from plone.supermodel import model
+from z3c.relationfield.schema import RelationChoice
+from zope import schema
+from zope.interface import implementer
+
 
 # from plonetheme.educorvi import _
 

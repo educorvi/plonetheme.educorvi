@@ -5,6 +5,7 @@ from zope import schema
 from zope.interface import implementer
 from zope.interface import Invalid
 
+
 def check_categories(value):
     if len(value) < 3:
         raise Invalid('Es müssen mindestens 3 Servicekategorien angegeben werden.')
