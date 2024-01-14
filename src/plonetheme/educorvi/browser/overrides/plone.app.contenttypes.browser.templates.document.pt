@@ -47,9 +47,21 @@
 	        <span tal:condition="context/text" tal:replace="structure context/text/output"/>
 	      </div>
 	  </section>
+
+          <section class="container pb-6">
+            <div class="row">
+              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
+                <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" />
+              </div>
+            </div>
+	  </section>
+
+
 	<article>
       </main>
-	      </div>
+      
+
+    </div>
     </metal:main>
   </body>
 </html>

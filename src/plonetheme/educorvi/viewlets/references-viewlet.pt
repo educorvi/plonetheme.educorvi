@@ -1,3 +1,13 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+  <div class="container">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div tal:repeat="ref view/references" class="feature col">
+        <div tal:condition="ref/img" class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+	   <a href="${ref/url}" style="border:none;">
+	   <img class="img-fluid" title="ref/title" style="height:150px; width:auto" alt="ref/title" src="${ref/img}">
+	   </a>
+        </div>
+	<h3 class="fs-2 text-body-emphasis">${ref/title}</h3>
+	<p tal:condition="ref/description">${ref/description}</p>
+      </div>
+    </div>
+  </div>
