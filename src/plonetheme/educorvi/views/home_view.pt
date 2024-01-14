@@ -14,11 +14,12 @@
       <header class="pt-6 pb-7">
         <div class="container-fluid">
           <div class="d-flex flex-column position-relative mb-5 mb-lg-4 px-xxl-5">
-	    <h1 class="d-flex flex-column order-lg-2 text-uppercase lh-1 mb-4 mb-lg-0">${view/title_one} 
-		    <span class="d-flex align-items-center ps-lg-5">${view/title_two}</span></h1>
-	    <h2 class="h3 order-lg-1 text-software mb-2 mb-lg-3">${view/cat_one}</h2>
-	    <h2 class="h3 order-lg-3 text-consulting mb-2 mb-lg-0 ps-lg-0">${view/cat_two}</h2>
-	    <h2 class="h3 order-lg-4 text-education mb-2 mb-lg-0 mt-lg-3">${view/cat_three}</h2>
+	          <h1 class="d-flex flex-column order-lg-2 text-uppercase lh-1 mb-4 mb-lg-0">${view/title_one} 
+		          <span class="d-flex align-items-center ps-lg-5">${view/title_two}</span>
+            </h1>
+	          <h2 class="h3 order-lg-1 text-software mb-2 mb-lg-3">${view/cat_one}</h2>
+	          <h2 class="h3 order-lg-3 text-consulting mb-2 mb-lg-0 ps-lg-0">${view/cat_two}</h2>
+	          <h2 class="h3 order-lg-4 text-education mb-2 mb-lg-0 mt-lg-3">${view/cat_three}</h2>
           </div>
           <div class="row">
             <div class="col-sm-8 col-lg-5 col-xxl-4 offset-lg-6 offset-xxl-7 d-flex flex-column align-items-lg-center">
@@ -28,21 +29,21 @@
                   <polygon points="339.9 260.72 263.65 344.85 263.65 99.49 236.37 99.49 236.37 344.86 160.1 260.72 139.9 279.04 250 400.51 360.1 279.04 339.9 260.72" fill="#fff"/>
                 </svg>
               </a>
-	      <p class="mb-0">${context/description}</p>
+	            <p class="mb-0">${context/description}</p>
             </div>
           </div>
         </div>
       </header>
       <section tal:define="entries view/services; 
-	                   entry python:entries[0];
-			   entryobj python:entry.get('object'); 
-			   image_url python:entry.get('image_url')"
-	       tal:attributes="class python:entryobj.background_color + ' pt-6 pb-7'"
-	       id = "anchor">
-        <div class="container">
+	                         entry python:entries[0];
+			                     entryobj python:entry.get('object'); 
+			                     image_url python:entry.get('image_url')"
+	             tal:attributes="class python:entryobj.background_color + ' pt-6 pb-7'"
+	             id = "anchor">
+        <div class="container-fluid">
           <div class="row mb-4 mb-lg-5">
             <div class="col-lg-11 offset-lg-1">
-	      <h3 class="h2 text-${entryobj/id}" tal:content="python:entryobj.title"></h3>
+	            <h3 class="h2 text-${entryobj/id}" tal:content="python:entryobj.title"></h3>
             </div>
           </div>
           <div class="row">
@@ -51,24 +52,23 @@
             </div>
             <div class="col-12 col-md-7 col-xxl-6 offset-md-1">
               <ul tal:condition="python:entryobj.groups" class="list-arrow mb-5">
-		<li tal:repeat="group python:entryobj.groups">${group}</li>
+		            <li tal:repeat="group python:entryobj.groups">${group}</li>
               </ul>
               <ul tal:condition="python:entryobj.topics" class="mb-5">
-		<li tal:repeat="topic python:entryobj.topics">${topic}</li>
+		            <li tal:repeat="topic python:entryobj.topics">${topic}</li>
               </ul>
-	      <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()"
-		 tal:content="python: entryobj.cta_title"></a>
+	            <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()" tal:content="python: entryobj.cta_title"></a>
             </div>
           </div>
-	</div>
+	      </div>
       </section>
 
       <section tal:repeat="entry python:view.services[1:]" 
 	       tal:attributes="class python:entry['object'].background_color + ' pt-6 pb-7'">
-        <div class="container" tal:define="entryobj python:entry.get('object'); image_url python:entry.get('image_url')">
+        <div class="container-fluid" tal:define="entryobj python:entry.get('object'); image_url python:entry.get('image_url')">
           <div class="row mb-4 mb-lg-5">
             <div class="col-lg-11 offset-lg-1">
-	      <h3 class="h2 text-${entryobj/id}" tal:content="python:entryobj.title"></h3>
+	            <h3 class="h2 text-${entryobj/id}" tal:content="python:entryobj.title"></h3>
             </div>
           </div>
           <div class="row">
@@ -77,18 +77,16 @@
             </div>
             <div class="col-12 col-md-7 col-xxl-6 offset-md-1">
               <ul tal:condition="python:entryobj.groups" class="list-arrow mb-5">
-		<li tal:repeat="group python:entryobj.groups">${group}</li>
+		            <li tal:repeat="group python:entryobj.groups">${group}</li>
               </ul>
               <ul tal:condition="python:entryobj.topics" class="mb-5">
-		<li tal:repeat="topic python:entryobj.topics">${topic}</li>
+		            <li tal:repeat="topic python:entryobj.topics">${topic}</li>
               </ul>
-	      <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()"
-		 tal:content="python: entryobj.cta_title"></a>
+	            <a class="btn btn-primary" tal:condition="python: entryobj.cta_url" tal:attributes="href python:entryobj.cta_url.to_object.absolute_url()" tal:content="python: entryobj.cta_title"></a>
             </div>
           </div>
-	</div>
+	      </div>
       </section>
-
 
     </main>
 

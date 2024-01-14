@@ -9,59 +9,49 @@
   <body>
 
     <metal:main fill-slot="main">
-    <div class="container">
+      <div class="container">
 
-      <div class="row">
-        <div class="col-12">
-          <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
+        <div class="row">
+          <div class="col-12">
+            <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
+          </div>
         </div>
+
+        <div class="row" id="main-content" tal:define="navroot context/@@plone_portal_state/navigation_root_url;">
+
+          <main>
+            <article>
+              <header class="container pt-3 pb-5">
+                <div class="row">
+                  <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
+		                <div class="d-flex flex-column">
+                      <h1 tal:content="context/title" class="order-2"></h1>
+                      <h2 tal:condition="context/dachzeile | nothing" tal:content="context/dachzeile | nothing" class="h4 order-1 text-uppercase"></h2>
+		                </div>
+                    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" />
+                    <div tal:condition="context/description" class="lead">
+                      <p tal:content="context/description"></p>
+		                </div>
+                  </div>
+                </div>
+              </header>
+
+	            <section class="container">
+	              <div class="row">
+                  <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
+	                  <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" />
+	                  <span tal:condition="context/text" tal:replace="structure context/text/output"/>
+                    <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" />
+	                </div>
+                </div>
+	            </section>
+	          <article>
+          </main>
+  
+        </div>
+
       </div>
-
-      <div class="row" id="main-content" tal:define="navroot context/@@plone_portal_state/navigation_root_url;">
-
-      <main>
-        <article>
-          <header class="container pt-3 pb-5">
-            <div class="row">
-              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
-		<div class="d-flex flex-column">
-                  <h1 tal:content="context/title" class="order-2"></h1>
-                  <h2 tal:condition="context/dachzeile | nothing" tal:content="context/dachzeile | nothing" class="h4 order-1 text-uppercase"></h2>
-		</div>
-                <div tal:condition="context/description" class="lead">
-                  <p tal:content="context/description"></p>
-		</div>
-                <!--<ul class="article-meta list-unstyled d-flex flex-column flex-md-row border-bottom mb-0 pb-2">
-                  <li>Letzte Änderung: 12.12.2023</li>
-                  <li>Kategorie: <a href="#">Themenbereich</a></li>
-                  <li>Weitere mögliche Meta-Angaben</li>
-		</ul>-->
-	        <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" />
-              </div>
-            </div>
-          </header>
-	  <section class="container pb-6">
-	    <div class="row">
-              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
-	        <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" />
-	        <span tal:condition="context/text" tal:replace="structure context/text/output"/>
-	      </div>
-	  </section>
-
-          <section class="container pb-6">
-            <div class="row">
-              <div class="col-lg-11 col-xl-9 col-xxl-8 offset-xl-2">
-                <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" />
-              </div>
-            </div>
-	  </section>
-
-
-	<article>
-      </main>
-      
-
-    </div>
     </metal:main>
+
   </body>
 </html>

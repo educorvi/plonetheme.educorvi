@@ -1,12 +1,14 @@
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-3 mb-md-0">
-            © 2023 educorvi GmbH & Co. KG
-          </div>
-          <nav class="col-md-6 d-md-flex justify-content-md-end">
-            <a class="me-4 active" aria-current="page" href="#">Home</a>
-            <a class="me-4" href="#">Datenschutz</a>
-            <a href="#">Impressum</a>
-          </nav>
-        </div>
-      </div>
+<div class="container"
+     tal:define="portal_state context/@@plone_portal_state;
+                 portal_url portal_state/portal_url;">
+  <div class="row">
+    <div class="col-md-6 mb-3 mb-md-0">
+      © 2023 educorvi GmbH & Co. KG
+    </div>
+    <nav class="col-md-6 d-md-flex justify-content-md-end">
+      <a class="me-4" aria-current="page" href="#">Home</a>
+      <a class="me-4" href="${portal_url}/datenschutz">Datenschutz</a>
+      <a href="${portal_url}/impressum">Impressum</a>
+    </nav>
+  </div>
+</div>
