@@ -41,6 +41,12 @@
     <link tal:replace="structure provider:plone.htmlhead.links" />
     <meta name="generator" content="Plone - https://plone.org/" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="${portal_url}/++plone++plonetheme.educorvi/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${portal_url}/++plone++plonetheme.educorvi/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${portal_url}/++plone++plonetheme.educorvi/favicon/favicon-16x16.png">
+    <link rel="manifest" href="${portal_url}/++plone++plonetheme.educorvi/favicon/site.webmanifest">
+    <link rel="icon" href="${portal_url}/++plone++plonetheme.educorvi/favicon/favicon.ico">
+
   </head>
 
   <body tal:define="isRTL portal_state/is_rtl;
