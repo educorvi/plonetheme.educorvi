@@ -22,7 +22,9 @@ class HomeView(BrowserView):
 
     def get_services(self):
         services = []
-        for service in self.context.getFolderContents():
+        for service in api.content.find(
+            context=self.context, depth=1, sort_on="getObjPositionInParent"
+        ):
             obj = service.getObject()
             entry = {}
             entry['object'] = obj

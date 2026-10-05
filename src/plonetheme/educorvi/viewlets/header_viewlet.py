@@ -72,7 +72,9 @@ class HeaderViewlet(ViewletBase):
         """
         Check if navigation will return items for folder
         """
-        items = item.getObject().getFolderContents()
+        items = api.content.find(
+            context=item.getObject(), depth=1, sort_on="getObjPositionInParent"
+        )
         for item in items:
             if self.check_item(item):
                 return True
@@ -104,7 +106,9 @@ class HeaderViewlet(ViewletBase):
             name='plone.types_use_view_action_in_listings')
         contents = list()
         try:
-            contents = context.getFolderContents()
+            contents = api.content.find(
+                context=context, depth=1, sort_on="getObjPositionInParent"
+            )
         except Exception:  # noqa: 902
             pass
         items = list()
